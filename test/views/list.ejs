@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src= 'http://code.jquery.com/jquery-1.10.1.min.js'></script>
-    <script src= 'javascripts/test.js'></script>
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <input id ='test' type="button" value="Test" />
-    <input id ='sendcgi' type="button" value="Send" />
-    <input id ='back' type="button" onClick='javascript:location.href="http://"+location.host' value="Back" />
-    <div id ='content'></div>
-    <img src = '/images/bicycle.JPG' style='width:311px; height:207px;' />
-  </body>
+	<head>
+		<title><%= title %></title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<script src= 'http://code.jquery.com/jquery-1.10.1.min.js'></script>
+		<script src= 'javascripts/test.js'></script>
+	</head>
+	<body>
+		<h1><%= title %></h1>
+		<p>Welcome to <%= title %></p>
+		<input id ='test' type="button" value="Test" />
+		<input id ='sendcgi' type="button" value="Send" />
+		<input id ='back' type="button" onClick='javascript:location.href="http://"+location.host' value="Back" />
+		<div id ='content'></div>
+		<div class='sub_header' style="color: #BBBD1F;  font-size: 30px;  text-decoration: underline;  font-family: verdana,helvetica,arial,sans-serif;">Honpac</div>
+		<form id='honpac' method="post" >
+			<li>
+				<label  style="min-width: 100px; display: inline-block; color:black;" for="title">Title</label>
+				<input  style="width: 150px;" name="title"  id="title" type="text" />
+			</li>
+			<li>
+				<label  style="min-width: 100px; display: inline-block; color:black;" for="name">Name</label>
+				<input  style="width: 150px;" name="name"  id="name" type="text" />
+						</li>
+			<li>
+				<label  style="min-width: 100px; display: inline-block; color:black;" for="email">E-mail</label>
+				<input  style="width: 150px;" name="email"  id="email" type="text" />
+			</li>
+			<li>
+				<label  style="min-width: 100px; display: inline-block; color:black;" for="data">Data</label>
+				<input  style="width: 150px; height: 100px" name="data"  id="data" type="text" />
+			</li>
+			<input type='button' id ='honpac' value='Honpac'></input>
+			<div id ='message'></div>
+			<img src = '/images/bicycle.JPG' style='width:311px; height:207px;' />
+		</body>
 </html>

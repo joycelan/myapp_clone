@@ -12,7 +12,7 @@ var express = require('express')
 var app = express();
 
 // all environments
-app.set('port', process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 3000);
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8080);
 app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP ||process.env.PORT);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -30,6 +30,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+app.get('/honpac.cgi', user.file);
 app.get('/test.cgi', function(req, res){
 	var k,ans = '';
 
