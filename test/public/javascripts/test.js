@@ -40,7 +40,7 @@ $(document).ready(function(){
 		 *                                 });*/
 		return $.ajax({ 
 			type:'POST',
-			url: '/cgi-bin/admin/honpac.cgi',
+			url: 'honpac.cgi',
 			data: $("form#honpac").serialize(),
 			success: function(data, textStatus, xhr) {
 				$('div#honpac div#message').text(data+'---> status: '+xhr.status);
