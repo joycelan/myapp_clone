@@ -14,4 +14,5 @@ export.file = function(req, res){
   var date = new Date();
   var time = date.getTime();
   writer.write( './message/'+req.body.title+' - '+ time +'.txt', k );
+  res.end();
 };
