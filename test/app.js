@@ -12,7 +12,8 @@ var express = require('express')
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 3000);
+app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP ||process.env.PORT);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(express.favicon());
@@ -39,6 +40,6 @@ app.get('/test.cgi', function(req, res){
 	res.send(ans+ "Hello Express Server");
 	res.end();
 });
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'), app.get('ipaddr'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
