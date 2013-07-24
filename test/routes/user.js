@@ -7,7 +7,7 @@ exports.list = function(req, res){
   res.render('list', { title: 'User' });
   res.send("respond with a resource");
 };
-export.file = function(req, res){
+exports.file = function(req, res){
   var result='';
   var k;
   console.log(req.body);
