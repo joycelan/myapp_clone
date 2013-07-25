@@ -33,8 +33,13 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/contactus', function(req, res){
-	if(lang == 2) contact.contactus_en(req, res);
+	if(lang == 2) {
+		console.log('ssss');
+		contact.contactus_en(req, res);
+	}
 	else contact.contactus(req, res);
+	console.log('cccccc');
+
 
 })
 

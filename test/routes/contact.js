@@ -8,5 +8,5 @@ exports.contactus = function(req, res){
 };
 exports.contactus_en = function(req, res){
   res.render('contactus_en', { title: 'Contact Us' });
-//  res.send("respond with a resource");
+  res.send("respond with a resource");
 };
