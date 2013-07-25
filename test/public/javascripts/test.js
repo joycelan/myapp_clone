@@ -9,8 +9,29 @@ $(document).ready(function(){
 	
 	
 //	});
+	
+	$('#lang_en').click(function(){
+		change_lang(2);
+	})
+	$('#lang_ch').click(function(){
+		change_lang(1);
+	})
 
-	$("#sendcgi").click(function() {
+	function change_lang(lang){
+		return $.ajax({ 
+			url: "change_lang.cgi",
+			dataType: 'text',
+			data: 'lang='+lang, //from click event
+			success: function(data, textStatus, xhr) {
+				console.log(data);
+				$('div#content').text(data+'---> status: '+xhr.status);
+			},
+			complete: function(xhr, textStatus) {
+				console.log(xhr.status);
+			}
+		});
+	}
+	$("#sendcgi").click(function(){
 		return $.ajax({ 
 			url: "test.cgi",
 			dataType: 'text',
@@ -24,6 +45,52 @@ $(document).ready(function(){
 			}
 		});
 	})
+	$("#list").click(function() {
+		return $.ajax({ 
+			url: "list.cgi",
+			dataType: 'text',
+			data: 'list', 
+			success: function(data, textStatus, xhr) {
+				console.log(data);
+				$('div#content').text(data+'---> status: '+xhr.status);
+			},
+			complete: function(xhr, textStatus) {
+				console.log(xhr.status);
+			}
+		});
+	})
+	$("#del").click(function() {
+		return $.ajax({ 
+			url: "del.cgi",
+			dataType: 'text',
+			data: $('input#del_file_name').val(), 
+			success: function(data, textStatus, xhr) {
+				console.log(data);
+				$('div#content').text(data+'---> status: '+xhr.status);
+			},
+			complete: function(xhr, textStatus) {
+				console.log(xhr.status);
+			}
+		});
+	})
+	$("#open").click(function() {
+		return $.ajax({ 
+			url: "open.cgi",
+			dataType: 'text',
+			data: $('input#open_file_name').val(), 
+			success: function(data, textStatus, xhr) {
+				console.log(data);
+				$('div#content').text(data+'---> status: '+xhr.status);
+			},
+			complete: function(xhr, textStatus) {
+				console.log(xhr.status);
+			}
+		});
+	})
+
+
+
+
 	$('form#honpac input#honpac').click(function(){
 		var arr =[];
 		arr['title']=$('input#title').val();

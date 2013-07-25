@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src= 'http://code.jquery.com/jquery-1.10.1.min.js'></script>
+    <script src= 'javascripts/test.js'></script>
+  </head>
+  <body>
+    <div id = 'contactus'>
+       <h1>華納夢幻科技股份有限公司</h1>
+       <p>Welcome to <%= title %></p>
+       <li>
+           <label>電子郵箱</label>
+           <span >honor.co@gmail.com<span>
+       </li>
+       <li>
+           <label>網址</label>
+           <span >http://honpactw.com<span>
+       </li>
+       <li>
+           <label>Skype</label>
+           <span >honpactw<span>
+       </li>
+       <li>
+           <label>電話</label>
+           <span >02-24931160<span>
+       </li>
+       <li>
+           <label>傳真</label>
+           <span >02-24931517<span>
+       </li>
+       <li>
+           <label>公司</label>
+           <span >台灣新北市雙溪區中華路67號<span>
+       </li>
+       <li>
+           <label>常駐</label>
+           <span >台灣新北市貢寮區龍門街53號<span>
+       </li>
+       <li>
+           <label></label>
+           <span ><span>
+       </li>
+       <li>
+           <label></label>
+           <span ><span>
+       </li>
+       <input id ='test' type="button" value="Test" />
+       <input id ='sendcgi' type="button" value="Send" />
+       <input id ='gousers' type="button" onClick='javascript:location.href="http://"+location.host+"/users"' value="Go Users" />
+       <div id ='content'></div>
+    </div>
+  </body>
+</html>
