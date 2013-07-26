@@ -87,9 +87,14 @@ $(document).ready(function(){
 			}
 		});
 	})
+	$(".product_img img").mouseenter(function() {
+		$( this ).addClass("hover");
 
+	})
+	$(".product_img img").mouseleave(function() {
+		$( this ).removeClass("hover");
 
-
+	})
 
 	$('form#honpac input#honpac').click(function(){
 		var arr =[];
