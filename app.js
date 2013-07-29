@@ -16,13 +16,12 @@ var express = require('express')
 , path = require('path');
 
 var app = express();
-var lang = 1; //1=chinese ; 2=engilsh
+var lang = 'ch';
 
 if (cluster.isMaster) {
 	// Fork workers.
 
 	var pool = {};
-	var lang = 1; //1=chinese ; 2=engilsh
 	for (var i = 0; i < numCPUs; i++) {
 		// cluster.fork();
 		createworker(pool);
@@ -74,13 +73,13 @@ else{
 	app.get('/', routes.index);
 	app.get('/users', user.list);
 	app.get('/contactus', function(req, res){
-		if(lang == 2) {
+		if(lang == 'en') {
 			contact.contactus_en(req, res);
 		}
 		else contact.contactus(req, res);
 	})
 	app.get('/honpac', function(req, res){
-		if(lang == 2) {
+		if(lang == 'en') {
 			honpac.honpac_six_en(req, res);
 		}
 		else honpac.honpac_six(req, res);
@@ -88,11 +87,12 @@ else{
 
 
 	app.get('/change_lang.cgi',function(req, res){
-		if(req.query['lang'] == 2){
-			lang = 2;
+		if(req.query['lang'] == 'en'){
+			lang = 'en';
 		}
-		else  lang = 1;
+		else  lang = 'ch';
 
+		console.log(lang);
 		res.send(lang);
 		res.end();
 	})

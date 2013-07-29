@@ -11,10 +11,10 @@ $(document).ready(function(){
 //	});
 	
 	$('#lang_en').click(function(){
-		change_lang(2);
+		change_lang('en');
 	})
 	$('#lang_ch').click(function(){
-		change_lang(1);
+		change_lang('ch');
 	})
 
 	function change_lang(lang){
@@ -24,7 +24,7 @@ $(document).ready(function(){
 			data: 'lang='+lang, //from click event
 			success: function(data, textStatus, xhr) {
 				console.log(data);
-				$('div#content').text(data+'---> status: '+xhr.status);
+				window.location.reload();
 			},
 			complete: function(xhr, textStatus) {
 				console.log(xhr.status);
