@@ -51,8 +51,7 @@ div#contactus {
 	height: 500px;
 	position: absolute;
 	left: 50%;
-	top: 50%;
-	margin-top: -400px;
+	top: 100px;
 	margin-left: -500px;
 	
 
@@ -83,8 +82,7 @@ div#honpac_six {
 	height: 500px;
 	position: absolute;
 	left: 50%;
-	top: 50%;
-	margin-top: -400px;
+	top: 100px;
 	margin-left: -500px;
 }
 div#honpac_six table {
@@ -123,8 +121,7 @@ div#aboutus {
 	height: 500px;
 	position: absolute;
 	left: 50%;
-	top: 50%;
-	margin-top: -400px;
+	top: 100px;
 	margin-left: -500px;
 }
 div#aboutus .word_container {
