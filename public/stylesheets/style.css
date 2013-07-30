@@ -6,6 +6,7 @@ a {
 	color: #00B7FF;
 }
 .hover {
+	cursor: pointer;
 	opacity: 0.7;
 	-moz-opacity: 0.7;
 	filter:alpha(opacity=0.7);
@@ -35,6 +36,7 @@ a {
 	position: relative;
 }
 .toolbar * {
+	cursor: pointer;
 	font-size: 8px;
 	width: 30px;
 	height: 30px;
