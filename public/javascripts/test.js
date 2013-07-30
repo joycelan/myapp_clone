@@ -5,11 +5,6 @@ $(document).ready(function(){
 		console.log('eeeee');
 	});
 
-//	$('#back').ckick(function(){
-	
-	
-//	});
-	
 	$('#lang_en').click(function(){
 		change_lang('en');
 	})
