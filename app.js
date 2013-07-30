@@ -11,6 +11,7 @@ var express = require('express')
 , user = require('./routes/user')
 , contact = require('./routes/contact')
 , honpac = require('./routes/honpac')
+, about = require('./routes/about')
 , http = require('http')
 , writer = require('./routes/write.js')
 , path = require('path');
@@ -72,7 +73,7 @@ else{
 
 	app.get('/', routes.index);
 	app.get('/users', user.list);
-	app.get('/contactus', function(req, res){
+	app.get('/contact', function(req, res){
 		if(lang == 'en') {
 			contact.contactus_en(req, res);
 		}
@@ -83,6 +84,12 @@ else{
 			honpac.honpac_six_en(req, res);
 		}
 		else honpac.honpac_six(req, res);
+	})
+	app.get('/about', function(req, res){
+		if(lang == 'en') {
+			about.aboutus_en(req, res);
+		}
+		else about.aboutus(req, res);
 	})
 
 

@@ -35,8 +35,9 @@ a {
 	position: relative;
 }
 .toolbar * {
-	width: 50px;
-	height: 50px;
+	font-size: 8px;
+	width: 30px;
+	height: 30px;
 	margin-right:20px;
 	float:right;
 	background-color: yellow;
@@ -49,7 +50,7 @@ div#contactus {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin-top: -300px;
+	margin-top: -400px;
 	margin-left: -500px;
 	
 
@@ -73,6 +74,7 @@ div#contactus  span.right {
 div#contactus  span.left {
 	float: left;
 }
+
 div#honpac_six {
         text-align:center;
 	width: 1000px;
@@ -80,7 +82,7 @@ div#honpac_six {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin-top: -300px;
+	margin-top: -400px;
 	margin-left: -500px;
 }
 div#honpac_six table {
@@ -112,4 +114,26 @@ div.product_group * {
 	display: inline-block;
 	margin-top: 20px;
 	margin-bottom: 5px;
+}
+div#aboutus {
+        text-align:center;
+	width: 1000px;
+	height: 500px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -400px;
+	margin-left: -500px;
+}
+div#aboutus .word_container {
+	text-align:center;
+}
+div#aboutus .word_container tr td {
+	width: 400px;
+	font-size: 14px;
+}
+div#aboutus .table_header {
+	color: #611BA3;
+	font-size: 16px;
+	font-weight: bold;
 }
