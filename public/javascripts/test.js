@@ -105,10 +105,12 @@ $(document).ready(function(){
 		 *             console.log('sssss',originalSettings)
 		 *                         return  [200, "success",originalSettings.data, {} ]
 		 *                                 });*/
+
 		return $.ajax({ 
 			type:'POST',
 			url: 'honpac.cgi',
 			data: $("form#honpac").serialize(),
+			// $("form").serializeArray();JSON.stringify(obj);
 			success: function(data, textStatus, xhr) {
 				$('div#honpac div#message').text(data+'---> status: '+xhr.status);
 			},
